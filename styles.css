@@ -274,6 +274,40 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   background: rgb(255 255 255 / 7%);
 }
 
+.mobile-sticky-cta {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: linear-gradient(180deg, rgb(17 22 29 / 86%), rgb(6 8 12 / 96%));
+  border-top: 1px solid rgb(184 234 36 / 24%);
+  backdrop-filter: blur(8px);
+}
+
+.mobile-cta-link {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.86rem;
+  color: #11150a;
+  border: 1px solid rgb(184 234 36 / 40%);
+  background: linear-gradient(180deg, var(--brand-bright) 0%, var(--brand) 45%, var(--brand-soft) 100%);
+  box-shadow: 0 8px 18px rgb(184 234 36 / 22%);
+}
+
+.mobile-cta-link:hover {
+  background: linear-gradient(180deg, #e4ff7d 0%, #c4eb37 50%, #a5d220 100%);
+}
+
 .hero-card,
 .trust-card,
 .card,
@@ -503,6 +537,14 @@ li::marker {
 }
 
 @media (max-width: 900px) {
+  body {
+    padding-bottom: 74px;
+  }
+
+  .mobile-sticky-cta {
+    display: grid;
+  }
+
   .locations-panel {
     right: auto;
     left: 0;
@@ -565,6 +607,20 @@ li::marker {
 }
 
 @media (max-width: 380px) {
+  body {
+    padding-bottom: 70px;
+  }
+
+  .mobile-sticky-cta {
+    gap: 0.35rem;
+    padding: 0.4rem;
+  }
+
+  .mobile-cta-link {
+    min-height: 38px;
+    font-size: 0.78rem;
+  }
+
   .locations-panel {
     width: min(94vw, 320px);
     max-height: 56vh;
