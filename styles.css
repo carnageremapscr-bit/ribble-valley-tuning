@@ -283,7 +283,7 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   z-index: 60;
   padding: 0.5rem;
   gap: 0.5rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   background: linear-gradient(180deg, rgb(17 22 29 / 86%), rgb(6 8 12 / 96%));
   border-top: 1px solid rgb(184 234 36 / 24%);
   backdrop-filter: blur(8px);
@@ -404,7 +404,7 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   border: none;
   border-radius: 12px;
   max-width: 100%;
-  min-height: 920px;
+  min-height: 900px;
 }
 
 .prose-block {
@@ -602,7 +602,7 @@ li::marker {
   }
 
   .vehicle-search-frame {
-    min-height: 1080px;
+    min-height: 1020px;
   }
 }
 
