@@ -563,3 +563,26 @@ li::marker {
     min-height: 1080px;
   }
 }
+
+@media (max-width: 380px) {
+  .locations-panel {
+    width: min(94vw, 320px);
+    max-height: 56vh;
+    padding: 0.5rem;
+  }
+
+  .locations-link {
+    padding: 0.42rem 0.5rem;
+    font-size: 0.82rem;
+  }
+
+  .nav-actions {
+    gap: 0.4rem;
+  }
+
+  .nav-actions .btn {
+    min-height: 38px;
+    padding: 0.3rem 0.45rem;
+    font-size: 0.8rem;
+  }
+}
