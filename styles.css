@@ -10,6 +10,12 @@
   --brand-dark: #95c413;
   --brand-glow: rgb(184 234 36 / 26%);
   --border: #2f353d;
+  --metal-streak-light: repeating-linear-gradient(0deg, rgb(255 255 255 / 1.1%) 0 1px, transparent 1px 4px, rgb(0 0 0 / 0.9%) 4px 5px, transparent 5px 12px);
+  --metal-streak-dark: repeating-linear-gradient(0deg, rgb(0 0 0 / 2.1%) 0 1px, transparent 1px 4px, rgb(255 255 255 / 0.6%) 4px 5px, transparent 5px 13px);
+  --metal-sheen: linear-gradient(180deg, rgb(255 255 255 / 7%) 0%, rgb(255 255 255 / 2%) 14%, rgb(0 0 0 / 6%) 30%, rgb(255 255 255 / 2.5%) 46%, rgb(0 0 0 / 7%) 66%, rgb(255 255 255 / 2%) 82%, rgb(0 0 0 / 5%) 100%);
+  --metal-fade-wide: linear-gradient(90deg, rgb(7 10 14 / 97%) 0%, rgb(20 26 34 / 80%) 23%, rgb(152 160 171 / 22%) 50%, rgb(20 26 34 / 80%) 77%, rgb(7 10 14 / 97%) 100%);
+  --metal-panel: linear-gradient(90deg, rgb(12 16 22 / 86%) 0%, rgb(36 43 53 / 68%) 24%, rgb(162 172 184 / 16%) 50%, rgb(36 43 53 / 68%) 76%, rgb(12 16 22 / 86%) 100%);
+  --metal-panel-soft: linear-gradient(90deg, rgb(12 16 22 / 72%) 0%, rgb(34 41 51 / 54%) 24%, rgb(152 162 174 / 12%) 50%, rgb(34 41 51 / 54%) 76%, rgb(12 16 22 / 72%) 100%);
 }
 
 * {
@@ -25,12 +31,13 @@ body {
 body {
   font-family: 'Inter', sans-serif;
   background:
-    repeating-linear-gradient(0deg, rgb(255 255 255 / 3.5%) 0 1px, transparent 1px 4px),
-    repeating-linear-gradient(0deg, rgb(0 0 0 / 8%) 0 2px, transparent 2px 8px),
-    linear-gradient(90deg, rgb(7 10 14 / 97%) 0%, rgb(20 26 34 / 78%) 22%, rgb(146 154 164 / 24%) 50%, rgb(20 26 34 / 78%) 78%, rgb(7 10 14 / 97%) 100%),
-    radial-gradient(74% 56% at 50% 14%, rgb(246 249 255 / 20%) 0%, rgb(184 192 205 / 11%) 34%, transparent 70%),
-    radial-gradient(84% 72% at 50% 100%, rgb(255 255 255 / 9%) 0%, transparent 66%),
-    radial-gradient(780px 440px at 50% 20%, rgb(216 255 73 / 10%) 0%, transparent 64%),
+    var(--metal-sheen),
+    var(--metal-streak-light),
+    var(--metal-streak-dark),
+    var(--metal-fade-wide),
+    radial-gradient(76% 56% at 50% 15%, rgb(246 249 255 / 18%) 0%, rgb(184 192 205 / 8%) 36%, transparent 70%),
+    radial-gradient(88% 74% at 50% 100%, rgb(255 255 255 / 6%) 0%, transparent 68%),
+    radial-gradient(760px 420px at 50% 22%, rgb(216 255 73 / 6%) 0%, transparent 62%),
     var(--bg);
   color: var(--text);
   line-height: 1.65;
@@ -46,7 +53,9 @@ body {
   top: 0;
   z-index: 40;
   backdrop-filter: blur(8px);
-  background: linear-gradient(145deg, rgb(108 115 124 / 16%) 0%, rgb(17 22 29 / 86%) 90%);
+  background:
+    var(--metal-streak-light),
+    linear-gradient(90deg, rgb(8 11 16 / 95%) 0%, rgb(26 33 43 / 84%) 22%, rgb(134 143 154 / 18%) 50%, rgb(26 33 43 / 84%) 78%, rgb(8 11 16 / 95%) 100%);
   border-bottom: 1px solid rgb(216 255 73 / 26%);
   box-shadow: 0 10px 24px rgb(0 0 0 / 28%);
 }
@@ -98,7 +107,9 @@ body {
   padding: 0.65rem;
   border-radius: 12px;
   border: 1px solid rgb(184 234 36 / 25%);
-  background: linear-gradient(160deg, rgb(108 115 124 / 24%) 0%, rgb(53 60 69 / 30%) 45%, rgb(17 22 29 / 88%) 100%);
+  background:
+    var(--metal-streak-light),
+    var(--metal-panel);
   box-shadow: 0 16px 34px rgb(0 0 0 / 40%);
   opacity: 0;
   visibility: hidden;
@@ -120,7 +131,7 @@ body {
   border: 1px solid rgb(255 255 255 / 10%);
   border-radius: 9px;
   padding: 0.5rem 0.6rem;
-  background: linear-gradient(160deg, rgb(255 255 255 / 9%) 0%, rgb(0 0 0 / 12%) 100%);
+  background: linear-gradient(180deg, rgb(186 194 204 / 12%) 0%, rgb(30 36 45 / 58%) 100%);
   font-size: 0.9rem;
 }
 
@@ -183,21 +194,29 @@ h1 {
 }
 
 main > section.section:not(.section-dark):not(.section-metal):not(.section-soft) {
-  background: linear-gradient(170deg, rgb(108 115 124 / 8%) 0%, rgb(17 22 29 / 20%) 100%);
+  background:
+    var(--metal-streak-light),
+    var(--metal-panel-soft);
 }
 
 .section-metal {
-  background: linear-gradient(180deg, rgb(154 164 176 / 10%) 0%, rgb(28 34 43 / 40%) 52%, rgb(10 13 18 / 58%) 100%);
+  background:
+    var(--metal-streak-light),
+    var(--metal-panel);
   border-top: 1px solid rgb(216 255 73 / 10%);
   border-bottom: 1px solid rgb(216 255 73 / 10%);
 }
 
 .section-soft {
-  background: linear-gradient(180deg, rgb(154 164 176 / 7%) 0%, rgb(30 36 46 / 28%) 55%, rgb(10 14 19 / 44%) 100%);
+  background:
+    var(--metal-streak-light),
+    var(--metal-panel-soft);
 }
 
 .section-dark {
-  background: linear-gradient(180deg, rgb(122 132 144 / 8%) 0%, rgb(24 30 38 / 38%) 55%, rgb(8 11 16 / 64%) 100%);
+  background:
+    var(--metal-streak-dark),
+    linear-gradient(180deg, rgb(128 138 150 / 8%) 0%, rgb(24 30 38 / 38%) 55%, rgb(8 11 16 / 66%) 100%);
   border-top: 1px solid rgb(184 234 36 / 16%);
   border-bottom: 1px solid rgb(184 234 36 / 16%);
 }
@@ -217,8 +236,8 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   border-radius: 18px;
   border: 1px solid rgb(216 255 73 / 38%);
   background:
-    repeating-linear-gradient(108deg, rgb(255 255 255 / 7%) 0 1px, transparent 1px 10px),
-    linear-gradient(165deg, rgb(146 155 167 / 22%) 0%, rgb(73 82 93 / 32%) 45%, rgb(20 25 32 / 70%) 100%);
+    var(--metal-streak-light),
+    linear-gradient(90deg, rgb(14 19 25 / 92%) 0%, rgb(36 43 54 / 78%) 24%, rgb(156 166 177 / 24%) 50%, rgb(36 43 54 / 78%) 76%, rgb(14 19 25 / 92%) 100%);
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 18%),
     0 20px 42px rgb(0 0 0 / 34%),
@@ -342,7 +361,9 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   padding: 0.5rem;
   gap: 0.5rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  background: linear-gradient(180deg, rgb(17 22 29 / 86%), rgb(6 8 12 / 96%));
+  background:
+    var(--metal-streak-light),
+    linear-gradient(180deg, rgb(20 26 34 / 90%), rgb(6 8 12 / 96%));
   border-top: 1px solid rgb(184 234 36 / 24%);
   backdrop-filter: blur(8px);
 }
@@ -376,7 +397,9 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 .local-card {
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: linear-gradient(160deg, rgb(108 115 124 / 16%) 0%, rgb(53 60 69 / 18%) 46%, rgb(17 22 29 / 60%) 100%);
+  background:
+    var(--metal-streak-light),
+    linear-gradient(180deg, rgb(170 180 192 / 12%) 0%, rgb(38 45 56 / 34%) 54%, rgb(16 21 28 / 66%) 100%);
   box-shadow: inset 0 1px 0 rgb(216 255 73 / 24%);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
@@ -553,7 +576,9 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.1rem;
-  background: linear-gradient(160deg, rgb(108 115 124 / 16%) 0%, rgb(53 60 69 / 18%) 46%, rgb(17 22 29 / 60%) 100%);
+  background:
+    var(--metal-streak-light),
+    linear-gradient(180deg, rgb(170 180 192 / 12%) 0%, rgb(38 45 56 / 34%) 54%, rgb(16 21 28 / 66%) 100%);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
@@ -587,7 +612,9 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 .site-footer {
   border-top: 1px solid rgb(184 234 36 / 14%);
   padding: 1rem 0;
-  background: linear-gradient(180deg, rgb(17 22 29 / 70%), rgb(6 8 12 / 95%));
+  background:
+    var(--metal-streak-dark),
+    linear-gradient(180deg, rgb(18 24 31 / 76%), rgb(6 8 12 / 95%));
 }
 
 .footer-wrap {
