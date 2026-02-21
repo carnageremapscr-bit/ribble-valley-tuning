@@ -231,48 +231,20 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 
 .hero-logo-frame {
   position: relative;
-  overflow: hidden;
-  padding: clamp(0.8rem, 2vw, 1.2rem);
-  border-radius: 18px;
-  border: 1px solid rgb(216 255 73 / 38%);
-  background:
-    var(--metal-streak-light),
-    linear-gradient(90deg, rgb(14 19 25 / 92%) 0%, rgb(36 43 54 / 78%) 24%, rgb(156 166 177 / 24%) 50%, rgb(36 43 54 / 78%) 76%, rgb(14 19 25 / 92%) 100%);
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 18%),
-    0 20px 42px rgb(0 0 0 / 34%),
-    0 0 0 1px rgb(255 255 255 / 5%);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
 }
 
 .hero-logo-frame::before,
 .hero-logo-frame::after {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgb(216 255 73 / 40%);
-  border-radius: 4px;
-  box-shadow: 0 0 12px rgb(216 255 73 / 24%);
-}
-
-.hero-logo-frame::before {
-  top: 10px;
-  left: 10px;
-}
-
-.hero-logo-frame::after {
-  right: 10px;
-  bottom: 10px;
+  content: none;
 }
 
 .hero-logo-frame:hover {
-  transform: translateY(-2px);
-  border-color: rgb(216 255 73 / 55%);
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 24%),
-    0 24px 52px rgb(0 0 0 / 40%),
-    0 0 22px rgb(216 255 73 / 16%);
+  transform: none;
+  box-shadow: none;
 }
 
 .hero-grid {
@@ -429,10 +401,11 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .hero-logo-large {
-  max-height: 380px;
+  max-height: 520px;
+  width: min(100%, 1120px);
   margin: 0 auto;
   display: block;
-  filter: saturate(1.2) contrast(1.08) drop-shadow(0 16px 36px rgb(0 0 0 / 45%));
+  filter: saturate(1.14) contrast(1.05) drop-shadow(0 18px 34px rgb(0 0 0 / 42%));
   margin-bottom: 0;
 }
 
@@ -712,8 +685,7 @@ li::marker {
   }
 
   .hero-logo-frame {
-    border-radius: 14px;
-    padding: 0.65rem;
+    padding: 0;
   }
 
   .hero-actions {
