@@ -226,7 +226,7 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .hero-logo-first {
-  padding: 2.4rem 0 1.4rem;
+  padding: 0.8rem 0 0.6rem;
 }
 
 .hero-logo-frame {
@@ -401,8 +401,8 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .hero-logo-large {
-  max-height: 520px;
-  width: min(100%, 1120px);
+  max-height: 85vh;
+  width: min(100%, 95vw);
   margin: 0 auto;
   display: block;
   filter: saturate(1.14) contrast(1.05) drop-shadow(0 18px 34px rgb(0 0 0 / 42%));
@@ -725,8 +725,8 @@ li::marker {
   }
 
   .hero-logo-first {
-    padding-top: 1.6rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.4rem;
   }
 
   .hero-logo-frame {
