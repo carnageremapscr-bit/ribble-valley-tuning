@@ -223,7 +223,7 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .hero {
-  padding: 0.5rem 0 0.5rem;
+  padding: 0;
 }
 
 .hero-logo-first {
@@ -708,7 +708,7 @@ li::marker {
   }
 
   .hero {
-    padding-top: 3rem;
+    padding: 0;
   }
 
   .footer-wrap {
