@@ -745,7 +745,7 @@ li::marker {
   }
 
   .hero-logo-large {
-    height: clamp(180px, 62vw, 340px) !important;
+    height: clamp(145px, 50vw, 280px) !important;
     width: 135% !important;
     max-width: none !important;
     max-height: none !important;
