@@ -405,8 +405,8 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .hero-logo-large {
-  height: 85vh;
-  width: auto;
+  height: 85vh !important;
+  width: auto !important;
   max-width: 100%;
   margin: 0 auto;
   display: block;
@@ -738,8 +738,8 @@ li::marker {
   }
 
   .hero-logo-large {
-    height: 75vh;
-    width: auto;
+    height: 75vh !important;
+    width: auto !important;
     max-width: 100%;
     margin: 0 auto;
   }
