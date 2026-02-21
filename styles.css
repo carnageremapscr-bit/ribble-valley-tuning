@@ -238,6 +238,7 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   border: none;
   background: transparent;
   box-shadow: none;
+  overflow: hidden;
 }
 
 .hero-logo-frame::before,
@@ -404,12 +405,14 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .hero-logo-large {
-  height: auto !important;
+  height: clamp(190px, 24vw, 320px) !important;
   width: 100% !important;
   max-width: 100% !important;
   max-height: none !important;
   margin: 0 auto;
   display: block;
+  object-fit: cover;
+  object-position: center;
   filter: saturate(1.14) contrast(1.05) drop-shadow(0 18px 34px rgb(0 0 0 / 42%));
   margin-bottom: 0;
 }
@@ -742,13 +745,14 @@ li::marker {
   }
 
   .hero-logo-large {
-    height: auto !important;
+    height: clamp(180px, 62vw, 340px) !important;
     width: 135% !important;
     max-width: none !important;
     max-height: none !important;
     margin: 0;
     margin-left: -17.5%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
   }
 
   .hero-actions {
