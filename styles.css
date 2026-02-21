@@ -405,10 +405,12 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .hero-logo-large {
-  height: 85vh !important;
-  width: auto !important;
-  max-width: 100%;
-  margin: 0 auto;
+  height: auto !important;
+  width: 110% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0;
+  margin-left: -5%;
   display: block;
   filter: saturate(1.14) contrast(1.05) drop-shadow(0 18px 34px rgb(0 0 0 / 42%));
   margin-bottom: 0;
@@ -738,10 +740,12 @@ li::marker {
   }
 
   .hero-logo-large {
-    height: 90vh !important;
-    width: 100% !important;
-    max-width: 100%;
+    height: auto !important;
+    width: 120% !important;
+    max-width: none !important;
+    max-height: none !important;
     margin: 0;
+    margin-left: -10%;
     object-fit: contain;
   }
 
@@ -755,6 +759,14 @@ li::marker {
 
   .vehicle-search-frame {
     min-height: 940px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 120%;
+    margin-left: -10%;
+    max-height: none;
   }
 }
 
