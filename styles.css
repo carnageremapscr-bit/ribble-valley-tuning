@@ -61,7 +61,8 @@ body {
 }
 
 .nav-wrap {
-  min-height: 72px;
+  min-height: auto;
+  padding: 0.4rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,8 +82,8 @@ body {
 
 .brand-logo,
 .footer-logo {
-  width: 260px;
-  height: 64px;
+  width: 420px;
+  height: 102px;
   object-fit: contain;
   filter: saturate(1.22) contrast(1.08) drop-shadow(0 8px 16px rgb(184 234 36 / 30%));
 }
@@ -222,11 +223,14 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .hero {
-  padding: 3.8rem 0 2.4rem;
+  padding: 0.5rem 0 0.5rem;
 }
 
 .hero-logo-first {
-  padding: 0.8rem 0 0.6rem;
+  padding: 0;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
 }
 
 .hero-logo-frame {
@@ -401,9 +405,9 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .hero-logo-large {
-  max-height: 85vh;
-  width: min(100%, 95vw);
-  margin: 0 auto;
+  max-height: 95vh;
+  width: 100%;
+  margin: 0;
   display: block;
   filter: saturate(1.14) contrast(1.05) drop-shadow(0 18px 34px rgb(0 0 0 / 42%));
   margin-bottom: 0;
@@ -666,14 +670,14 @@ li::marker {
 
   .nav-wrap {
     min-height: auto;
-    padding: 0.65rem 0;
-    gap: 0.6rem;
+    padding: 0.45rem 0;
+    gap: 0.5rem;
     flex-wrap: wrap;
   }
 
   .brand-logo {
-    width: 210px;
-    height: 56px;
+    width: 320px;
+    height: 78px;
   }
 
   .nav-actions {
@@ -725,8 +729,7 @@ li::marker {
   }
 
   .hero-logo-first {
-    padding-top: 0.5rem;
-    padding-bottom: 0.4rem;
+    padding: 0;
   }
 
   .hero-logo-frame {
