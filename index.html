@@ -52,6 +52,9 @@
         <h2>Vehicle Search</h2>
         <div class="embed-wrap">
               <iframe id="vehicle-search-iframe" class="vehicle-search-frame" src="https://web-production-df12d.up.railway.app/test-vrm.html?color=%23d8ff49&colorLight=%23c4eb37&gold=%231f4ab1&bg=%23070a0e&logo=enquiries%40ribblevalleytuning.co.uk&wa=07718585777&email=carnageremaps%40gmail.com&iframeId=123cba0b-537d-46b6-bc8a-4f3aa53fb1de" width="100%" style="border:none;border-radius:12px;max-width:100%;" title="VRM Lookup" loading="lazy"></iframe>
+              <div class="embed-actions">
+                <button id="vehicle-search-reset" class="btn btn-ghost embed-refresh-btn" type="button">Search Again</button>
+              </div>
         </div>
       </div>
     </section>
@@ -182,9 +185,12 @@
 
   <script>
     (function () {
+      const vehicleSearchSection = document.getElementById('vehicle-search');
       const embedWrap = document.querySelector('#vehicle-search .embed-wrap');
       const iframe = document.getElementById('vehicle-search-iframe');
+      const resetButton = document.getElementById('vehicle-search-reset');
       if (!embedWrap || !iframe) return;
+      const baseIframeSrc = iframe.getAttribute('src') || '';
 
       const expandToHeight = (height) => {
         const nextHeight = Math.min(1400, Math.max(820, Math.round(height + 80)));
@@ -225,6 +231,17 @@
           embedWrap.classList.add('is-expanded');
         }
       });
+
+      if (resetButton && baseIframeSrc) {
+        resetButton.addEventListener('click', () => {
+          const resetSrc = new URL(baseIframeSrc, window.location.href);
+          resetSrc.searchParams.set('_reload', String(Date.now()));
+          iframe.src = resetSrc.toString();
+          iframe.style.height = '';
+          embedWrap.classList.remove('is-expanded');
+          vehicleSearchSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
     })();
   </script>
 </body>

@@ -483,6 +483,16 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   padding: 0.35rem;
 }
 
+.embed-actions {
+  margin-top: 0.65rem;
+  display: flex;
+  justify-content: center;
+}
+
+.embed-refresh-btn {
+  cursor: pointer;
+}
+
 .vehicle-search-frame {
   border: none;
   border-radius: 12px;
