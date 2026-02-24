@@ -51,7 +51,7 @@
       <div class="container">
         <h2>Vehicle Search</h2>
         <div class="embed-wrap">
-          <iframe src="https://web-production-df12d.up.railway.app/test-vrm.html?color=%23d8ff49&bg=%23070a0e&logo=enquiries%40ribblevalleytuning.co.uk&wa=07718585777&email=carnageremaps%40gmail.com&iframeId=123cba0b-537d-46b6-bc8a-4f3aa53fb1de" width="100%" height="600" style="border:none;border-radius:12px;max-width:100%;" title="VRM Lookup" loading="lazy"></iframe>
+              <iframe id="vehicle-search-iframe" class="vehicle-search-frame" src="https://web-production-df12d.up.railway.app/test-vrm.html?color=%23d8ff49&colorLight=%23c4eb37&gold=%231f4ab1&bg=%23070a0e&logo=enquiries%40ribblevalleytuning.co.uk&wa=07718585777&email=carnageremaps%40gmail.com&iframeId=123cba0b-537d-46b6-bc8a-4f3aa53fb1de" width="100%" style="border:none;border-radius:12px;max-width:100%;" title="VRM Lookup" loading="lazy"></iframe>
         </div>
       </div>
     </section>
@@ -179,5 +179,53 @@
       <p>© 2026 Ribble Valley Tuning. All rights reserved. Built by <a class="footer-credit" href="https://www.webportalpro.co.uk/index.html" target="_blank" rel="noopener noreferrer">Web Portal Pro</a>.</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const embedWrap = document.querySelector('#vehicle-search .embed-wrap');
+      const iframe = document.getElementById('vehicle-search-iframe');
+      if (!embedWrap || !iframe) return;
+
+      const expandToHeight = (height) => {
+        const nextHeight = Math.min(1400, Math.max(820, Math.round(height + 80)));
+        iframe.style.height = `${nextHeight}px`;
+        embedWrap.classList.add('is-expanded');
+      };
+
+      window.addEventListener('message', (event) => {
+        if (event.source !== iframe.contentWindow) return;
+        let data = event.data;
+
+        if (typeof data === 'string') {
+          try {
+            data = JSON.parse(data);
+          } catch {
+            return;
+          }
+        }
+
+        if (!data || typeof data !== 'object') return;
+
+        const heightValue = Number(data.height ?? data.iframeHeight ?? data.frameHeight);
+        const searchCompleted =
+          data.searched === true ||
+          data.lookupComplete === true ||
+          data.lookupSuccess === true ||
+          data.searchComplete === true ||
+          data.event === 'lookup-success' ||
+          data.event === 'search-complete' ||
+          data.type === 'vrm-result';
+
+        if (Number.isFinite(heightValue) && (heightValue > 500 || searchCompleted)) {
+          expandToHeight(heightValue);
+          return;
+        }
+
+        if (searchCompleted) {
+          embedWrap.classList.add('is-expanded');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
