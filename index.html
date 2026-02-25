@@ -50,11 +50,21 @@
     <section id="vehicle-search" class="section section-metal search-section">
       <div class="container">
         <h2>Vehicle Search</h2>
-        <div class="embed-wrap">
+        <div class="lookup-grid">
+          <div class="embed-wrap">
+              <h3 class="embed-title">VRM Lookup</h3>
               <iframe id="vehicle-search-iframe" class="vehicle-search-frame" src="https://web-production-df12d.up.railway.app/test-vrm.html?color=%23d8ff49&colorLight=%23c4eb37&gold=%231f4ab1&bg=%23070a0e&logo=enquiries%40ribblevalleytuning.co.uk&wa=07718585777&email=carnageremaps%40gmail.com&iframeId=123cba0b-537d-46b6-bc8a-4f3aa53fb1de" width="100%" style="border:none;border-radius:12px;max-width:100%;" title="VRM Lookup" loading="lazy"></iframe>
               <div class="embed-actions">
                 <button id="vehicle-search-reset" class="btn btn-ghost embed-refresh-btn" type="button">Search Again</button>
               </div>
+          </div>
+          <div class="embed-wrap">
+              <h3 class="embed-title">Vehicle Lookup (Legacy)</h3>
+              <iframe id="vehicle-search-old-iframe" class="vehicle-search-frame" src="https://web-production-df12d.up.railway.app/embed.html?v=4&color=%239aec36&bg=%231a1a1a&title=%F0%9F%94%8D%20Vehicle%20Search&desc=Search%20our%20database%20for%20detailed%20vehicle%20information&logo=https%3A%2F%2Fweb-production-df12d.up.railway.app%2Fassets%2Fmedia%2Fuploads%2F1771532375942-E4D12F0C-42D7-46F9-8619-EA3BAC274AB1.png&wa=07718585777&email=ribblevalleytuning%40gmail.com&showYear=1&showPerf=1&showStages=1" width="100%" style="border:none;border-radius:12px;max-width:100%;" title="Vehicle Lookup" loading="lazy"></iframe>
+              <div class="embed-actions">
+                <button id="vehicle-search-old-reset" class="btn btn-ghost embed-refresh-btn" type="button">Search Again</button>
+              </div>
+          </div>
         </div>
       </div>
     </section>
@@ -186,20 +196,31 @@
   <script>
     (function () {
       const vehicleSearchSection = document.getElementById('vehicle-search');
-      const embedWrap = document.querySelector('#vehicle-search .embed-wrap');
-      const iframe = document.getElementById('vehicle-search-iframe');
-      const resetButton = document.getElementById('vehicle-search-reset');
-      if (!embedWrap || !iframe) return;
-      const baseIframeSrc = iframe.getAttribute('src') || '';
+      const embeds = [
+        {
+          iframe: document.getElementById('vehicle-search-iframe'),
+          wrap: document.getElementById('vehicle-search-iframe')?.closest('.embed-wrap'),
+          resetButton: document.getElementById('vehicle-search-reset')
+        },
+        {
+          iframe: document.getElementById('vehicle-search-old-iframe'),
+          wrap: document.getElementById('vehicle-search-old-iframe')?.closest('.embed-wrap'),
+          resetButton: document.getElementById('vehicle-search-old-reset')
+        }
+      ].filter((item) => item.iframe && item.wrap);
 
-      const expandToHeight = (height) => {
+      if (!embeds.length) return;
+
+      const expandToHeight = (item, height) => {
         const nextHeight = Math.min(1400, Math.max(820, Math.round(height + 80)));
-        iframe.style.height = `${nextHeight}px`;
-        embedWrap.classList.add('is-expanded');
+        item.iframe.style.height = `${nextHeight}px`;
+        item.wrap.classList.add('is-expanded');
       };
 
       window.addEventListener('message', (event) => {
-        if (event.source !== iframe.contentWindow) return;
+        const target = embeds.find((item) => item.iframe.contentWindow === event.source);
+        if (!target) return;
+
         let data = event.data;
 
         if (typeof data === 'string') {
@@ -220,28 +241,33 @@
           data.searchComplete === true ||
           data.event === 'lookup-success' ||
           data.event === 'search-complete' ||
+          data.event === 'vehicle-found' ||
+          data.type === 'vehicle-result' ||
           data.type === 'vrm-result';
 
         if (Number.isFinite(heightValue) && (heightValue > 500 || searchCompleted)) {
-          expandToHeight(heightValue);
+          expandToHeight(target, heightValue);
           return;
         }
 
         if (searchCompleted) {
-          embedWrap.classList.add('is-expanded');
+          target.wrap.classList.add('is-expanded');
         }
       });
 
-      if (resetButton && baseIframeSrc) {
-        resetButton.addEventListener('click', () => {
+      embeds.forEach((item) => {
+        const baseIframeSrc = item.iframe.getAttribute('src') || '';
+        if (!item.resetButton || !baseIframeSrc) return;
+
+        item.resetButton.addEventListener('click', () => {
           const resetSrc = new URL(baseIframeSrc, window.location.href);
           resetSrc.searchParams.set('_reload', String(Date.now()));
-          iframe.src = resetSrc.toString();
-          iframe.style.height = '';
-          embedWrap.classList.remove('is-expanded');
+          item.iframe.src = resetSrc.toString();
+          item.iframe.style.height = '';
+          item.wrap.classList.remove('is-expanded');
           vehicleSearchSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
-      }
+      });
     })();
   </script>
 </body>

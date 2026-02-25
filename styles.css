@@ -479,8 +479,21 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   padding-top: 1rem;
 }
 
+.lookup-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .embed-wrap {
   padding: 0.35rem;
+}
+
+.embed-title {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  color: #f3f7ff;
 }
 
 .embed-actions {
@@ -723,6 +736,10 @@ li::marker {
   .highlight-grid,
   .process-grid,
   .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lookup-grid {
     grid-template-columns: 1fr;
   }
 
