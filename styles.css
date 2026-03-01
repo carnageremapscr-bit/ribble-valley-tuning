@@ -48,7 +48,6 @@ body {
   z-index: 40;
   backdrop-filter: blur(8px);
   background: var(--surface-uniform);
-  border-bottom: 1px solid rgb(var(--brand-rgb) / 26%);
   box-shadow: 0 10px 24px rgb(0 0 0 / 28%);
 }
 
@@ -189,20 +188,14 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 
 .section-metal {
   background: var(--surface-uniform);
-  border-top: 1px solid rgb(var(--brand-rgb) / 10%);
-  border-bottom: 1px solid rgb(var(--brand-rgb) / 10%);
 }
 
 .section-soft {
   background: var(--surface-uniform);
-  border-top: 1px solid rgb(var(--brand-rgb) / 10%);
-  border-bottom: 1px solid rgb(var(--brand-rgb) / 10%);
 }
 
 .section-dark {
   background: var(--surface-uniform);
-  border-top: 1px solid rgb(var(--brand-rgb) / 10%);
-  border-bottom: 1px solid rgb(var(--brand-rgb) / 10%);
 }
 
 .hero {
@@ -333,7 +326,6 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   gap: 0.5rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   background: var(--surface-uniform);
-  border-top: 1px solid rgb(var(--brand-rgb) / 24%);
   backdrop-filter: blur(8px);
 }
 
@@ -627,7 +619,6 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
 }
 
 .site-footer {
-  border-top: 1px solid rgb(var(--brand-rgb) / 14%);
   padding: 1.25rem 0;
   background: var(--surface-uniform);
 }
@@ -657,7 +648,6 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   gap: 0.45rem 1rem;
   margin: 0;
   padding-bottom: 0.2rem;
-  border-bottom: 1px solid rgb(var(--brand-rgb) / 14%);
 }
 
 .footer-links a {
