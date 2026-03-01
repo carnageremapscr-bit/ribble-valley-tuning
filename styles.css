@@ -400,7 +400,7 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   max-height: none !important;
   margin: 0 auto;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   filter: none;
   margin-bottom: 0;
@@ -778,11 +778,12 @@ li::marker {
 
   .hero-logo-large {
     height: clamp(145px, 50vw, 280px) !important;
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 135% !important;
+    max-width: none !important;
     max-height: none !important;
-    margin: 0 auto;
-    object-fit: contain;
+    margin: 0;
+    margin-left: -17.5%;
+    object-fit: cover;
     object-position: center;
   }
 
