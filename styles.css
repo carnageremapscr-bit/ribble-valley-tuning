@@ -519,6 +519,7 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   width: 100%;
   margin: 0 auto;
   display: block;
+  filter: hue-rotate(20deg) saturate(1.08) brightness(0.96);
   transition: height 0.28s ease;
 }
 
