@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /.tmp-live-index.html
 
 Sitemap: https://ribblevalleytuning.co.uk/sitemap.xml
 Host: ribblevalleytuning.co.uk

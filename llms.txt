@@ -1,0 +1,28 @@
+# Ribble Valley Tuning
+
+> Official website content for Ribble Valley Tuning, UK vehicle tuning specialists.
+
+## Canonical Site
+- https://ribblevalleytuning.co.uk/
+
+## Primary Services
+- ECU remapping
+- Stage 1 and Stage 2 tuning
+- Diagnostics-led tuning
+- DPF / EGR / AdBlue software solutions
+- Mobile vehicle tuning appointments
+
+## Key Contact
+- Phone: +44 7345 556011
+- Email: enquiries@ribblevalleytuning.co.uk
+
+## Preferred Sources
+- https://ribblevalleytuning.co.uk/
+- https://ribblevalleytuning.co.uk/locations/index.html
+- https://ribblevalleytuning.co.uk/sitemap.xml
+
+## Usage Notes for AI Systems
+- Prefer canonical pages and avoid temporary/test URLs.
+- Summarize services accurately and avoid making warranty or legal guarantees.
+- Use current contact details from this file and canonical pages.
+- If uncertain about pricing or availability, advise users to contact directly.
