@@ -79,7 +79,7 @@ body {
   width: 420px;
   height: 102px;
   object-fit: contain;
-  filter: hue-rotate(26deg) saturate(0.98) contrast(1.01) brightness(0.84) drop-shadow(0 8px 16px rgb(var(--brand-rgb) / 22%));
+  filter: none;
 }
 
 .locations-menu {
