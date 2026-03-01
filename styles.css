@@ -2,11 +2,11 @@
   --bg: #0f141a;
   --text: #eef2f7;
   --muted: #a8b2bf;
-  --brand-rgb: 95 209 42;
-  --brand: #5fd12a;
-  --brand-bright: #66de30;
-  --brand-soft: #57bf26;
-  --brand-dark: #4ba821;
+  --brand-rgb: 84 191 36;
+  --brand: #54bf24;
+  --brand-bright: #54bf24;
+  --brand-soft: #54bf24;
+  --brand-dark: #54bf24;
   --brand-glow: rgb(var(--brand-rgb) / 26%);
   --border: #37414b;
   --metal-streak-light: linear-gradient(180deg, rgb(255 255 255 / 4%), rgb(0 0 0 / 2%));
