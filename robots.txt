@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ribblevalleytuning.co.uk/sitemap.xml
+Host: ribblevalleytuning.co.uk
