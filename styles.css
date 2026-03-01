@@ -400,9 +400,9 @@ main > section.section:not(.section-dark):not(.section-metal):not(.section-soft)
   max-height: none !important;
   margin: 0 auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  filter: hue-rotate(26deg) saturate(0.94) contrast(1.01) brightness(0.84) drop-shadow(0 18px 34px rgb(0 0 0 / 42%));
+  filter: none;
   margin-bottom: 0;
 }
 
@@ -778,12 +778,11 @@ li::marker {
 
   .hero-logo-large {
     height: clamp(145px, 50vw, 280px) !important;
-    width: 135% !important;
-    max-width: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
     max-height: none !important;
-    margin: 0;
-    margin-left: -17.5%;
-    object-fit: cover;
+    margin: 0 auto;
+    object-fit: contain;
     object-position: center;
   }
 
