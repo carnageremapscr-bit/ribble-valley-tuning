@@ -205,6 +205,7 @@
   <script>
     (function () {
       const vehicleSearchSection = document.getElementById('vehicle-search');
+      const mobileStickyCta = document.querySelector('.mobile-sticky-cta');
       const embeds = [
         {
           iframe: document.getElementById('vehicle-search-iframe'),
@@ -214,6 +215,26 @@
       ].filter((item) => item.iframe && item.wrap);
 
       if (!embeds.length) return;
+
+      const syncMobileCtaVisibility = () => {
+        if (!mobileStickyCta || !vehicleSearchSection) return;
+
+        const isMobile = window.matchMedia('(max-width: 900px)').matches;
+        if (!isMobile) {
+          mobileStickyCta.classList.remove('is-hidden');
+          return;
+        }
+
+        const rect = vehicleSearchSection.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const searchInView = rect.top < viewportHeight - 80 && rect.bottom > 120;
+        mobileStickyCta.classList.toggle('is-hidden', searchInView);
+      };
+
+      window.addEventListener('scroll', syncMobileCtaVisibility, { passive: true });
+      window.addEventListener('resize', syncMobileCtaVisibility);
+      window.addEventListener('orientationchange', syncMobileCtaVisibility);
+      syncMobileCtaVisibility();
 
       const expandToHeight = (item, height) => {
         const isMobile = window.matchMedia('(max-width: 900px)').matches;
@@ -273,6 +294,7 @@
           item.iframe.style.height = '';
           item.wrap.classList.remove('is-expanded');
           vehicleSearchSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          syncMobileCtaVisibility();
         });
       });
     })();
