@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -33,156 +33,319 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260414-3" />
+  <link rel="stylesheet" href="styles.css?v=20260414-6" />
 </head>
 <body>
   <main id="home">
-    <section class="hero hero-logo-first section-metal">
+
+    <!-- HERO -->
+    <section class="hero-split" id="vehicle-search" aria-label="Hero">
+      <div class="container hero-split-inner">
+
+        <div class="hero-left reveal">
+          <img src="assets/logo.png" alt="Ribble Valley Tuning" class="hero-logo-left" />
+          <p class="location-label">&#9670; LANCASHIRE &amp; RIBBLE VALLEY</p>
+          <h1 class="hero-heading">
+            <span class="hero-line">REMAP.</span>
+            <span class="hero-line accent-line">OPTIMISE.</span>
+            <span class="hero-line">PERFORM.</span>
+          </h1>
+          <p class="hero-sub">Professional ECU remapping, DPF &amp; EGR solutions, and mobile vehicle tuning delivered across Lancashire.</p>
+          <ul class="hero-bullets">
+            <li>Stage 1 &amp; Stage 2 Remaps</li>
+            <li>DPF, EGR &amp; AdBlue Solutions</li>
+            <li>Mobile &mdash; We Come To You</li>
+            <li>12-Month Software Warranty</li>
+          </ul>
+          <div class="hero-ctas">
+            <a href="tel:+447345556011" class="btn btn-primary btn-lg">Call 07345 556011</a>
+            <a href="https://wa.me/447345556011" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="hero-right-wrap reveal reveal-d1">
+          <div class="lookup-card" id="lookup-card">
+            <p class="lookup-label">Enter your reg &mdash; see your options instantly</p>
+            <iframe
+              src="https://secure-file-portal-portal-pro.up.railway.app/embed/vehicle-lookup.html?key=emb_bf7e5ad232a58e444a44bd64c0b3f25f46bb2fba49c022fb"
+              width="100%" height="480" frameborder="0"
+              allow="top-navigation-by-user-activation"
+              style="border:none; display:block;"
+              referrerpolicy="no-referrer"
+              title="VRM Lookup"
+              id="hero-vrm-iframe"></iframe>
+            <div class="embed-actions">
+              <button id="vehicle-search-reset" class="btn btn-primary embed-refresh-btn" type="button">Search Again</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="new-stats-bar">
+      <div class="new-stat reveal">
+        <span class="new-stat-num">Stage 1</span>
+        <span class="new-stat-label">Remapping Available</span>
+      </div>
+      <div class="new-stat reveal reveal-d1">
+        <span class="new-stat-num">12mo</span>
+        <span class="new-stat-label">Software Warranty</span>
+      </div>
+      <div class="new-stat reveal reveal-d2">
+        <span class="new-stat-num">Mobile</span>
+        <span class="new-stat-label">We Come To You</span>
+      </div>
+      <div class="new-stat reveal reveal-d3">
+        <span class="new-stat-num">100%</span>
+        <span class="new-stat-label">Custom Calibrations</span>
+      </div>
+    </div>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>ECU Remapping</span><span class="ticker-dot"> &#9670; </span>
+        <span>DPF &amp; EGR Solutions</span><span class="ticker-dot"> &#9670; </span>
+        <span>AdBlue Specialist</span><span class="ticker-dot"> &#9670; </span>
+        <span>12-Month Warranty</span><span class="ticker-dot"> &#9670; </span>
+        <span>Mobile Service</span><span class="ticker-dot"> &#9670; </span>
+        <span>Lancashire Wide</span><span class="ticker-dot"> &#9670; </span>
+        <span>Stage 1 &amp; Stage 2</span><span class="ticker-dot"> &#9670; </span>
+        <span>Custom File Development</span><span class="ticker-dot"> &#9670; </span>
+        <span>ECU Remapping</span><span class="ticker-dot"> &#9670; </span>
+        <span>DPF &amp; EGR Solutions</span><span class="ticker-dot"> &#9670; </span>
+        <span>AdBlue Specialist</span><span class="ticker-dot"> &#9670; </span>
+        <span>12-Month Warranty</span><span class="ticker-dot"> &#9670; </span>
+        <span>Mobile Service</span><span class="ticker-dot"> &#9670; </span>
+        <span>Lancashire Wide</span><span class="ticker-dot"> &#9670; </span>
+        <span>Stage 1 &amp; Stage 2</span><span class="ticker-dot"> &#9670; </span>
+        <span>Custom File Development</span><span class="ticker-dot"> &#9670; </span>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="section section-modern services-section">
       <div class="container">
-        <div class="hero-logo-frame">
-          <img src="assets/logo.png" alt="Ribble Valley Tuning branding" class="hero-logo hero-logo-large" />
+        <p class="section-eyebrow">WHAT WE DO</p>
+        <div class="section-header-row">
+          <h2>OUR <span class="accent">SERVICES</span></h2>
+          <a href="locations/index.html" class="view-all-link">VIEW ALL LOCATIONS &#8594;</a>
+        </div>
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+            <div class="service-card-visual" style="background:linear-gradient(135deg,#0c180a 0%,#1a3012 100%);">
+              <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 38 C8 22 18 10 32 10 C46 10 56 22 56 38" stroke="#e3ff00" stroke-width="3" stroke-linecap="round"/>
+                <path d="M20 38 L32 22 L44 38" stroke="#e3ff00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="32" cy="44" r="5" stroke="#e3ff00" stroke-width="2.5"/>
+                <line x1="32" y1="49" x2="32" y2="56" stroke="#e3ff00" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-card-body">
+              <span class="service-tag">Stage 1 &amp; Stage 2</span>
+              <h3>Performance Remapping</h3>
+              <p>Unlock your vehicle's true potential. More power, better torque, improved fuel economy &mdash; all calibrated to your specific vehicle.</p>
+              <a href="#vehicle-search" class="learn-more">ENQUIRE NOW &#8594;</a>
+            </div>
+          </article>
+
+          <article class="service-card reveal reveal-d1">
+            <div class="service-card-visual" style="background:linear-gradient(135deg,#0a0d1f 0%,#101830 100%);">
+              <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="18" width="44" height="30" rx="5" stroke="#e3ff00" stroke-width="2.5"/>
+                <path d="M22 18V13a2 2 0 012-2h16a2 2 0 012 2v5" stroke="#e3ff00" stroke-width="2.5"/>
+                <line x1="20" y1="33" x2="44" y2="33" stroke="#e3ff00" stroke-width="2" stroke-linecap="round"/>
+                <line x1="26" y1="40" x2="38" y2="40" stroke="#e3ff00" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-card-body">
+              <span class="service-tag">Permanent Software Fix</span>
+              <h3>DPF, EGR &amp; AdBlue Solutions</h3>
+              <p>Stuck with dashboard warnings or no-start faults? Software-based solutions with full diagnostics and clear recommendations.</p>
+              <a href="#vehicle-search" class="learn-more">ENQUIRE NOW &#8594;</a>
+            </div>
+          </article>
+
+          <article class="service-card reveal reveal-d2">
+            <div class="service-card-visual" style="background:linear-gradient(135deg,#1a0a0a 0%,#2a1010 100%);">
+              <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="18" y="12" width="28" height="40" rx="4" stroke="#e3ff00" stroke-width="2.5"/>
+                <line x1="24" y1="22" x2="40" y2="22" stroke="#e3ff00" stroke-width="2" stroke-linecap="round"/>
+                <line x1="24" y1="30" x2="40" y2="30" stroke="#e3ff00" stroke-width="2" stroke-linecap="round"/>
+                <line x1="24" y1="38" x2="34" y2="38" stroke="#e3ff00" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="46" cy="46" r="6" stroke="#e3ff00" stroke-width="2.5"/>
+                <line x1="50" y1="50" x2="54" y2="54" stroke="#e3ff00" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-card-body">
+              <span class="service-tag">At Your Home or Workplace</span>
+              <h3>Mobile Diagnostics &amp; Tuning</h3>
+              <p>Full diagnostics, remapping, and software solutions carried out on-site across Lancashire &mdash; no garage visit needed.</p>
+              <a href="#vehicle-search" class="learn-more">ENQUIRE NOW &#8594;</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <section class="section section-soft">
+    <!-- WHY CHOOSE -->
+    <section class="section section-modern why-section">
       <div class="container">
-        <p class="eyebrow hero-eyebrow">
-          <span>ECU Remaps</span>
-          <span>DPF/EGR Solutions</span>
-          <span>AdBlue Specialist</span>
-        </p>
-        <h1>Precision ECU Tuning for Real-World Performance</h1>
-        <p class="lead">
-          Custom remapping for petrol and diesel vehicles, focused on stronger driveability, cleaner response, and dependable real-world performance.
-        </p>
-        <div class="scan-chips">
-          <span class="scan-chip">Reliability First</span>
-          <span class="scan-chip">Mobile Service</span>
-          <span class="scan-chip">Performance Remapping</span>
+        <p class="section-eyebrow">WHY CHOOSE RIBBLE VALLEY TUNING</p>
+        <h2>THE SMARTER WAY TO <span class="accent">TUNE YOUR CAR</span></h2>
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <span class="why-icon">&#128663;</span>
+            <h3>Fully Mobile</h3>
+            <p>We come to your home, workplace or roadside anywhere across Lancashire. No garage visit needed.</p>
+          </article>
+          <article class="why-card reveal reveal-d1">
+            <span class="why-icon">&#9889;</span>
+            <h3>Fast Turnaround</h3>
+            <p>Most jobs completed in under an hour. Same-day appointments often available &mdash; call us to check.</p>
+          </article>
+          <article class="why-card reveal reveal-d2">
+            <span class="why-icon">&#128737;</span>
+            <h3>12-Month Warranty</h3>
+            <p>All software work comes with a 12-month warranty as standard. Professional results every time.</p>
+          </article>
+          <article class="why-card reveal reveal-d1">
+            <span class="why-icon">&#128295;</span>
+            <h3>Custom File Development</h3>
+            <p>Every calibration is built specifically for your engine, setup, and goals &mdash; nothing off-the-shelf.</p>
+          </article>
+          <article class="why-card reveal reveal-d2">
+            <span class="why-icon">&#163;</span>
+            <h3>No Hidden Fees</h3>
+            <p>Transparent, upfront pricing. What we quote is what you pay. No nasty surprises once we're done.</p>
+          </article>
+          <article class="why-card reveal reveal-d3">
+            <span class="why-icon">&#127959;</span>
+            <h3>Local Specialist</h3>
+            <p>Serving the Ribble Valley and wider Lancashire daily &mdash; your dedicated local performance expert.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="vehicle-search" class="section section-metal search-section">
+    <!-- PROCESS -->
+    <section class="section section-modern process-section" id="process">
       <div class="container">
-        <h2>Vehicle Search</h2>
-        <div class="lookup-grid">
-          <div class="embed-wrap">
-              <h3 class="embed-title">VRM Lookup</h3>
-              <iframe src="https://secure-file-portal-portal-pro.up.railway.app/embed/vehicle-lookup.html?key=emb_bf7e5ad232a58e444a44bd64c0b3f25f46bb2fba49c022fb" width="100%" height="700" frameborder="0" allow="top-navigation-by-user-activation" style="border:none; border-radius:12px; max-width:800px;" referrerpolicy="no-referrer" title="VRM Lookup"></iframe>
-              <div class="embed-actions">
-                <button id="vehicle-search-reset" class="btn btn-primary embed-refresh-btn" type="button">Search Again</button>
-              </div>
+        <p class="section-eyebrow">HOW IT WORKS</p>
+        <h2>OUR <span class="accent">PROCESS</span></h2>
+        <div class="new-process-steps">
+          <article class="new-process-step reveal">
+            <span class="new-step-num">01</span>
+            <h3>Get In Touch</h3>
+            <p>Call, WhatsApp or email us with your vehicle reg and what you're looking for.</p>
+          </article>
+          <div class="step-connector reveal">&#8594;</div>
+          <article class="new-process-step reveal reveal-d1">
+            <span class="new-step-num">02</span>
+            <h3>We Come To You</h3>
+            <p>We arrange a convenient time and come to your home, workplace or any location across Lancashire.</p>
+          </article>
+          <div class="step-connector reveal reveal-d1">&#8594;</div>
+          <article class="new-process-step reveal reveal-d2">
+            <span class="new-step-num">03</span>
+            <h3>Diagnostic Scan</h3>
+            <p>We run a full diagnostic scan to confirm the issue and assess what's needed before any work begins.</p>
+          </article>
+          <div class="step-connector reveal reveal-d2">&#8594;</div>
+          <article class="new-process-step reveal reveal-d3">
+            <span class="new-step-num">04</span>
+            <h3>Custom Solution</h3>
+            <p>Safe, dealer-grade ECU programming and remapping tailored to your specific engine and vehicle type.</p>
+          </article>
+          <div class="step-connector reveal reveal-d3">&#8594;</div>
+          <article class="new-process-step reveal reveal-d4">
+            <span class="new-step-num">05</span>
+            <h3>Test &amp; Warranty</h3>
+            <p>We verify everything works correctly before we leave, backed by our 12-month software warranty.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COVERAGE -->
+    <section class="section section-modern coverage-section" id="coverage">
+      <div class="container">
+        <p class="section-eyebrow">COVERAGE AREA</p>
+        <h2>WHERE WE <span class="accent">OPERATE</span></h2>
+        <div class="coverage-grid">
+          <div class="coverage-base reveal">
+            <span class="coverage-pin">&#128205;</span>
+            <p class="coverage-city">CLITHEROE</p>
+            <p class="coverage-county">LANCASHIRE</p>
+            <p class="coverage-radius">Wide coverage radius</p>
+          </div>
+          <div class="reveal reveal-d1">
+            <p class="coverage-desc">Based in the Ribble Valley, we cover Lancashire and surrounding areas with mobile call-outs. Can't see your town? Call us and we will confirm availability.</p>
+            <div class="coverage-towns">
+              <ul>
+                <li>Clitheroe</li>
+                <li>Burnley</li>
+                <li>Blackburn</li>
+                <li>Preston</li>
+                <li>Lancaster</li>
+                <li>Accrington</li>
+              </ul>
+              <ul>
+                <li>Nelson</li>
+                <li>Colne</li>
+                <li>Whalley</li>
+                <li>Longridge</li>
+                <li>Chorley</li>
+                <li>Bolton</li>
+              </ul>
+            </div>
+            <a href="locations/index.html" class="btn btn-primary">View All Locations</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section section-metal">
-      <div class="container cta">
-        <h2>Book in Minutes</h2>
-        <p class="lead">Choose the fastest contact method and we'll guide you to the right service.</p>
-        <div class="action-grid">
-          <article class="action-card">
-            <h3>Call Direct</h3>
-            <p>Speak directly about your vehicle and the best tuning route.</p>
-            <a class="btn btn-primary" href="tel:+447345556011">Call 07345 556011</a>
-          </article>
-          <article class="action-card">
-            <h3>Email Details</h3>
-            <p>Send your vehicle registration and we'll reply with options and pricing.</p>
-            <a class="btn btn-primary" href="mailto:enquiries@ribblevalleytuning.co.uk">Email Us</a>
-          </article>
-          <article class="action-card">
-            <h3>WhatsApp</h3>
-            <p>Send your registration and requirements for a quick response.</p>
-            <a class="btn btn-primary" href="https://wa.me/447345556011" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
-          </article>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="mailto:enquiries@ribblevalleytuning.co.uk">enquiries@ribblevalleytuning.co.uk</a>
-          <a class="btn btn-primary" href="tel:+447345556011">07345 556011</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section section-soft">
+    <!-- FAQ -->
+    <section class="section section-modern faq-section">
       <div class="container">
-        <h2>Everything You Need, In One Service</h2>
-        <p class="lead">The same expert support, presented in one clear view so customers can quickly understand the offer.</p>
-        <div class="cards">
-          <article class="card">
-            <h3>Custom File Development</h3>
-            <p>Every calibration is built for your specific engine, setup, and goals.</p>
-          </article>
-          <article class="card">
-            <h3>Stage 1 &amp; Stage 2</h3>
-            <p>Performance-focused software for usable gains and dependable drivability.</p>
-          </article>
-          <article class="card">
-            <h3>DPF / EGR / AdBlue</h3>
-            <p>Software solutions with diagnostics checks and clear recommendations.</p>
-          </article>
-          <article class="card">
-            <h3>Diagnostics-Led Tuning</h3>
-            <p>Before-and-after checks to keep performance safe, smooth, and consistent.</p>
-          </article>
-          <article class="card">
-            <h3>Mobile Appointments</h3>
-            <p>Flexible mobile bookings around your schedule at suitable locations.</p>
-          </article>
-          <article class="card">
-            <h3>Aftercare Support</h3>
-            <p>Ongoing advice if your vehicle setup changes after tuning.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-metal">
-      <div class="container">
-        <h2>Simple 4-Step Process</h2>
-        <div class="process-grid">
-          <article class="card">
-            <h3>1. Vehicle Assessment</h3>
-            <p>We check your vehicle setup, health, and goals first.</p>
-          </article>
-          <article class="card">
-            <h3>2. Custom Calibration</h3>
-            <p>Your software is tailored for your exact usage and engine setup.</p>
-          </article>
-          <article class="card">
-            <h3>3. Data &amp; Health Checks</h3>
-            <p>Post-tune checks confirm smooth operation and consistent delivery.</p>
-          </article>
-          <article class="card">
-            <h3>4. Ongoing Support</h3>
-            <p>Clear aftercare guidance if your setup changes later.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="container">
-        <h2>Quick Answers</h2>
-        <div class="faq-grid">
-          <article class="card">
+        <p class="section-eyebrow">QUICK ANSWERS</p>
+        <h2>COMMON <span class="accent">QUESTIONS</span></h2>
+        <div class="new-faq-grid">
+          <article class="new-faq-card reveal">
             <h3>Is remapping safe?</h3>
-            <p>Yes, when carried out correctly. We use a safety-first process and only apply suitable, tested calibrations.</p>
+            <p>Yes, when carried out correctly. We use a safety-first process and only apply suitable, tested calibrations to your vehicle.</p>
           </article>
-          <article class="card">
+          <article class="new-faq-card reveal reveal-d1">
             <h3>Do you offer mobile tuning?</h3>
-            <p>Yes. Ribble Valley Tuning offers mobile appointments across local areas for convenience and flexibility.</p>
+            <p>Yes. Ribble Valley Tuning offers mobile appointments across Lancashire. We come to you at home or work.</p>
           </article>
-          <article class="card">
+          <article class="new-faq-card reveal reveal-d2">
             <h3>Can I discuss options first?</h3>
-            <p>Yes. Send your registration and goals and we'll recommend the best route before booking.</p>
+            <p>Yes. Send your registration and goals and we'll recommend the best route and provide a clear quote before booking.</p>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- CTA STRIP -->
+    <section id="contact" class="section cta-strip">
+      <div class="container cta-strip-inner">
+        <div>
+          <h2>Ready to unlock your vehicle's potential?</h2>
+          <p>Get in touch today &mdash; we'll guide you to the right solution.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary btn-lg" href="#vehicle-search">Vehicle Lookup</a>
+          <a class="btn btn-outline btn-lg" href="tel:+447345556011">Call 07345 556011</a>
+          <a class="btn btn-ghost btn-lg" href="https://wa.me/447345556011" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div class="mobile-sticky-cta" aria-label="Quick contact actions">
@@ -196,127 +359,81 @@
       <img src="assets/logo2.png" alt="Ribble Valley Tuning logo" class="footer-logo" />
       <nav class="footer-links" aria-label="Footer">
         <a href="index.html">Home</a>
-        <a href="index.html#vehicle-search">Vehicle Search</a>
-        <a href="index.html#contact">Book Now</a>
+        <a href="#vehicle-search">Vehicle Search</a>
+        <a href="#contact">Book Now</a>
         <a href="locations/index.html">Locations</a>
       </nav>
-      <p>© 2026 Ribble Valley Tuning. All rights reserved. Built by <a class="footer-credit" href="https://www.webportalpro.co.uk/" target="_blank" rel="noopener noreferrer">Web Portal Pro</a>.</p>
+      <p>&#169; 2026 Ribble Valley Tuning. All rights reserved. Built by <a class="footer-credit" href="https://www.webportalpro.co.uk/" target="_blank" rel="noopener noreferrer">Web Portal Pro</a>.</p>
     </div>
   </footer>
 
   <script>
     (function () {
-      const vehicleSearchSection = document.getElementById('vehicle-search');
+      // Reveal on scroll
+      const revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        revealEls.forEach((el) => io.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('is-visible'));
+      }
+
+      // Mobile sticky CTA visibility
+      const heroSection = document.getElementById('vehicle-search');
       const mobileStickyCta = document.querySelector('.mobile-sticky-cta');
-      const vehicleSearchIframe = document.querySelector('.embed-wrap iframe[title="VRM Lookup"]');
-      const embeds = [
-        {
-          iframe: vehicleSearchIframe,
-          wrap: vehicleSearchIframe?.closest('.embed-wrap'),
-          resetButton: document.getElementById('vehicle-search-reset')
-        }
-      ].filter((item) => item.iframe && item.wrap);
-
-      if (!embeds.length) return;
-
       const syncMobileCtaVisibility = () => {
-        if (!mobileStickyCta || !vehicleSearchSection) return;
-
+        if (!mobileStickyCta || !heroSection) return;
         const isMobile = window.matchMedia('(max-width: 900px)').matches;
-        if (!isMobile) {
-          mobileStickyCta.classList.remove('is-hidden');
-          return;
-        }
-
-        const rect = vehicleSearchSection.getBoundingClientRect();
-        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-        const searchInView = rect.top < viewportHeight - 80 && rect.bottom > 120;
-        mobileStickyCta.classList.toggle('is-hidden', searchInView);
+        if (!isMobile) { mobileStickyCta.classList.remove('is-hidden'); return; }
+        const rect = heroSection.getBoundingClientRect();
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        mobileStickyCta.classList.toggle('is-hidden', rect.top < vh - 80 && rect.bottom > 120);
       };
-
       window.addEventListener('scroll', syncMobileCtaVisibility, { passive: true });
       window.addEventListener('resize', syncMobileCtaVisibility);
-      window.addEventListener('orientationchange', syncMobileCtaVisibility);
       syncMobileCtaVisibility();
 
-      const expandToHeight = (item, height) => {
+      // iframe resize + reset
+      const iframe = document.getElementById('hero-vrm-iframe');
+      const wrap = iframe ? iframe.closest('.lookup-card') : null;
+      const resetBtn = document.getElementById('vehicle-search-reset');
+      if (!iframe) return;
+
+      const expandToHeight = (h) => {
         const isMobile = window.matchMedia('(max-width: 900px)').matches;
-        const minHeight = isMobile ? 620 : 680;
-        const maxHeight = isMobile ? 1000 : 1200;
-        const nextHeight = Math.min(maxHeight, Math.max(minHeight, Math.round(height + 64)));
-        item.iframe.style.height = `${nextHeight}px`;
-        item.wrap.classList.add('is-expanded');
+        const min = isMobile ? 560 : 620;
+        const max = isMobile ? 950 : 1100;
+        iframe.style.height = Math.min(max, Math.max(min, Math.round(h + 64))) + 'px';
+        if (wrap) wrap.classList.add('is-expanded');
       };
 
       window.addEventListener('message', (event) => {
-        const target = embeds.find((item) => item.iframe.contentWindow === event.source);
-        if (!target) return;
-
+        if (!iframe.contentWindow || event.source !== iframe.contentWindow) return;
         let data = event.data;
-
-        if (typeof data === 'string') {
-          try {
-            data = JSON.parse(data);
-          } catch {
-            return;
-          }
-        }
-
+        if (typeof data === 'string') { try { data = JSON.parse(data); } catch { return; } }
         if (!data || typeof data !== 'object') return;
-
-        // Handle vehicle not found - redirect to email
-        const vehicleNotFound =
-          data.event === 'vehicle-not-found' ||
-          data.event === 'lookup-failed' ||
-          data.event === 'lookup-error' ||
-          data.type === 'error' ||
-          (data.error && !data.success);
-
-        if (vehicleNotFound) {
-          window.location.href = 'mailto:enquiries@ribblevalleytuning.co.uk?subject=Vehicle%20Search%20Enquiry';
-          return;
-        }
-
-        const heightValue = Number(data.height ?? data.iframeHeight ?? data.frameHeight);
-        const searchCompleted =
-          data.searched === true ||
-          data.lookupComplete === true ||
-          data.lookupSuccess === true ||
-          data.searchComplete === true ||
-          data.event === 'lookup-success' ||
-          data.event === 'search-complete' ||
-          data.event === 'vehicle-found' ||
-          data.type === 'vehicle-result' ||
-          data.type === 'vrm-result';
-
-        if (Number.isFinite(heightValue) && (heightValue > 500 || searchCompleted)) {
-          expandToHeight(target, heightValue);
-          return;
-        }
-
-        if (searchCompleted) {
-          target.wrap.classList.add('is-expanded');
-        }
+        const notFound = data.event === 'vehicle-not-found' || data.event === 'lookup-failed' || data.event === 'lookup-error' || data.type === 'error' || (data.error && !data.success);
+        if (notFound) { window.location.href = 'mailto:enquiries@ribblevalleytuning.co.uk?subject=Vehicle%20Search%20Enquiry'; return; }
+        const heightVal = Number(data.height ?? data.iframeHeight ?? data.frameHeight);
+        const done = data.searched || data.lookupComplete || data.lookupSuccess || data.searchComplete || ['lookup-success','search-complete','vehicle-found'].includes(data.event) || ['vehicle-result','vrm-result'].includes(data.type);
+        if (Number.isFinite(heightVal) && (heightVal > 500 || done)) { expandToHeight(heightVal); return; }
+        if (done && wrap) wrap.classList.add('is-expanded');
       });
 
-      embeds.forEach((item) => {
-        const baseIframeSrc = item.iframe.getAttribute('src') || '';
-        if (!item.resetButton || !baseIframeSrc) return;
-
-        item.resetButton.addEventListener('click', () => {
-          const resetSrc = new URL(baseIframeSrc, window.location.href);
-          resetSrc.searchParams.set('_reload', String(Date.now()));
-          item.iframe.src = resetSrc.toString();
-          item.iframe.style.height = '';
-          item.wrap.classList.remove('is-expanded');
-          vehicleSearchSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          syncMobileCtaVisibility();
+      if (resetBtn && iframe) {
+        const baseSrc = iframe.getAttribute('src') || '';
+        resetBtn.addEventListener('click', () => {
+          const s = new URL(baseSrc, window.location.href);
+          s.searchParams.set('_reload', String(Date.now()));
+          iframe.src = s.toString();
+          iframe.style.height = '480px';
+          if (wrap) wrap.classList.remove('is-expanded');
+          heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
-      });
+      }
     })();
   </script>
 </body>
 </html>
-
-
-
