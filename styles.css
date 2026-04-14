@@ -1154,6 +1154,12 @@ li::marker {
   justify-content: center;
 }
 .service-icon { width: 56px; height: 56px; }
+.service-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
 .service-card-body { padding: 1.1rem; }
 .service-tag {
   display: inline-block;
